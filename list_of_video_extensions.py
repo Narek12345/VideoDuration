@@ -1,0 +1,1 @@
+list_of_video_extensions = ('.mkv', '.avi', '.mp4')
