@@ -3,3 +3,6 @@ __pycache__
 
 # Virtual environment.
 venv
+
+# File with project update plans.
+plans_for_updates.txt
