@@ -1,3 +1,9 @@
+from colorama import(
+	init,
+	Fore,
+	Back
+)
+
 import os
 
 from project_functions import (
@@ -9,11 +15,11 @@ from project_functions import (
 def start():
 
 	# Путь к видео или к папке с видео.
-	path_to_video_or_video_folder = input("Введите местонахождение видео или же папку с видео: ").replace('"', "")
+	path_to_video_or_video_folder = input("\nВведите местонахождение видео или же папку с видео: ").replace('"', "").strip()
 
 	# Находим переданный обьект.
 	if os.path.exists(path_to_video_or_video_folder):
-	
+
 		# Проверка на то, что был передан файл, а не папка.
 		if os.path.isfile(path_to_video_or_video_folder):
 
@@ -27,7 +33,8 @@ def start():
 			counts_duration_of_video_files_from_folder.	counts_duration_of_video_files_from_folder(path_to_video_or_video_folder)
 
 	else:
-		print("Путь не найден")
+		print(Fore.RED + "\nПуть не найден")
+
 
 
 if __name__ == '__main__':
